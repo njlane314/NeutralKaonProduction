@@ -1,5 +1,7 @@
 #include "ubana/NeutralKaonProduction/Interface/include/ConfigManager.h"
 //_________________________________________________________________________________________
+ConfigManager* ConfigManager::instancePtr = nullptr;
+//_________________________________________________________________________________________
 ConfigManager& ConfigManager::Initialise(fhicl::ParameterSet const& p) 
 {
     static ConfigManager instance(p);
@@ -18,6 +20,4 @@ ConfigManager& ConfigManager::GetInstance()
 //_________________________________________________________________________________________
 ConfigManager::ConfigManager(fhicl::ParameterSet const& p) 
     : m_debug(p.get<bool>("debug", false)) //,
-{
-    static ConfigManager* instancePtr = this; 
-}
+{}

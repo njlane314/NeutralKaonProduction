@@ -9,7 +9,7 @@
 
 class ConfigManager {
 public:
-    static ConfigManager& Initialize(fhicl::ParameterSet const& p);
+    static ConfigManager& Initialise(fhicl::ParameterSet const& p);
     static ConfigManager& GetInstance();
 
     ConfigManager(const ConfigManager&) = delete;
@@ -19,6 +19,8 @@ public:
 
 private:
     ConfigManager(fhicl::ParameterSet const& p);
+
+    static ConfigManager* instancePtr;
 
     bool m_debug;
 };

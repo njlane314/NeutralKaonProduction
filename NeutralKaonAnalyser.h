@@ -52,6 +52,6 @@ class ub_neutral_kaons::NeutralKaonAnalyser : public art::EDAnalyzer
       void endSubRun(const art::SubRun& sr);
 
    private:
-      ConfigManager m_config;
+      ConfigManager& m_config;
       //DataHandler m_dataHandler; 
 };
