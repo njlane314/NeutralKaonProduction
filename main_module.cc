@@ -4,13 +4,13 @@ ub_neutral_kaons::NeutralKaonAnalyser::NeutralKaonAnalyser(fhicl::ParameterSet c
    : EDAnalyzer{p},
    m_config(ConfigManager::Initialise(p)) //,
    //m_dataHandler(std::make_unique<DataHandler>())
-{
-
-}
+{}
 //_________________________________________________________________________________________
 void ub_neutral_kaons::NeutralKaonAnalyser::analyze(art::Event const& e)
 {
    if(m_config.isDebugEnabled()) std::cout << "Assigning event..." << std::endl;
+
+   std::cout << e.id().event() << std::endl;
 
    //m_dataHandler->assignEvent();
 }

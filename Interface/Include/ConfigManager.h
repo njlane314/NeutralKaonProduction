@@ -1,11 +1,13 @@
-#ifndef CONFIG_MANAGER_H
-#define CONFIG_MANAGER_H
+#ifndef CONFIGMANAGER_H
+#define CONFIGMANAGER_H
 
 #include <string>
 #include <vector>
 #include <fhiclcpp/types/Atom.h>
 #include <fhiclcpp/types/Sequence.h>
 #include <fhiclcpp/ParameterSet.h>
+
+namespace ub_neutral_kaons {
 
 class ConfigManager {
 public:
@@ -25,4 +27,6 @@ private:
     bool m_debug;
 };
 
-#endif // CONFIG_MANAGER_H
+}
+
+#endif // CONFIGMANAGER_H

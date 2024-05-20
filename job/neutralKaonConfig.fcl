@@ -1,0 +1,9 @@
+BEGIN_PROLOG
+
+neutral_kaon_analyser:
+{
+        module_type: NeutralKaonAnalyser
+        debug: false
+}
+
+END_PROLOG

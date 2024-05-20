@@ -1,0 +1,26 @@
+#include "neutralKaonConfig.fcl"
+#include "services_microboone.fcl"
+
+process_name: NeutralKaonAnalysis
+
+source:
+{
+        module_type: RootInput
+        @table::microboone_services
+        FileCatalogMetadata: @local::art_file_catalog_mc
+}
+
+services:
+{
+        TFileService: { fileName: "neutralKaonOutput.root" }
+}
+
+physics:
+{
+        analyzers:
+        {
+                ana: @local::neutral_kaon_analyser
+        }
+        path0: [ ana ]
+        end_paths: [ path0 ]
+}
